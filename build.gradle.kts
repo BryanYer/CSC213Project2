@@ -9,7 +9,7 @@ repositories.mavenCentral()
 
 java.toolchain.languageVersion.set(JavaLanguageVersion.of(21))
 
-application.mainClass = "AppLauncher"
+application.mainClass = "DataAnalyzerApp"
 
 javafx {
     version = "21.0.2"
