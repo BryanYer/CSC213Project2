@@ -19,7 +19,7 @@ public class DataAnalyzerApp extends Application {
 		final DataAnalyzerController controller = loader.getController();
 		
 		// TODO: Once you are ready to start testing your app with your GUI, uncomment this line below.
-//		primaryStage.show();
+		primaryStage.show();
 	}
 	
 }
