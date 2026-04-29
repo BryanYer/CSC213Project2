@@ -37,8 +37,7 @@
         <Button text="Export stats to .txt" font="$largeFont" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.halignment="CENTER" onAction="#handleExport"/>
 
         <!-- Help button -->
-        <!-- TODO: Add an onAction tag if we decide to implement the help button -->
-        <Button text="Help" font="$largeFont" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.halignment="CENTER"/>
+        <Button text="Help" font="$largeFont" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.halignment="CENTER" onAction="#handleHelp"/>
 
 
     </GridPane>

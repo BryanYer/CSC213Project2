@@ -14,6 +14,7 @@ import java.io.IOException;
 /**
  * Controller for the Data Analyzer UI.
  * Handles file selection, analysis, and exporting results.
+ * @author Bryan Yerina
  */
 public class DataAnalyzerController {
 
@@ -22,7 +23,10 @@ public class DataAnalyzerController {
     private final DataAnalyzer analyzer = new DataAnalyzer();
     private File currentFile;
 
-    // Lets you pick a file, and analyzes it
+    /**
+     * Lets you pick a file, and analyzes it
+     * @param event Select file button pressed
+     */
     @FXML
     private void handleSelectFile(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
@@ -48,7 +52,10 @@ public class DataAnalyzerController {
         }
     }
 
-    // Exports stats to text file
+    /**
+     * Exports stats to text file
+     * @param event Export stats to .txt button pressed
+     */
     @FXML
     private void handleExport(ActionEvent event) {
         if (currentFile == null) {
@@ -76,6 +83,18 @@ public class DataAnalyzerController {
                 statsArea.setText("Error writing file: " + e.getMessage());
             }
         }
+    }
+
+    @FXML
+    private void handleHelp(ActionEvent event){
+        Stage stage = (Stage) statsArea.getScene().getWindow();
+
+        statsArea.setText("""
+                1. Press "Select file"
+                2. Choose a text file with data from your computer
+                3. Press "Export stats to .txt"
+                4. Select a location to save the stats file and choose a name
+                """);
     }
 
 }

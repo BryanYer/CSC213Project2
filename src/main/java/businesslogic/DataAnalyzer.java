@@ -16,7 +16,7 @@ import java.io.IOException;
  * It uses Welford’s algorithm for numerically stable calculation
  * of mean and standard deviation.
  *
- * Author: Abu Jallow
+ * @author  Abu Jallow
  */
 public class DataAnalyzer {
 
