@@ -1,0 +1,17 @@
+HOW TO USE:
+1. Press "Select file"
+2. Choose a text file with data from your computer
+3. Press "Export stats to .txt"
+4. Select a location to save the stats file and choose a name
+
+WHAT TO EXPECT:
+The program will read the selected text file and calculate the following:
+1. Number of values in the file
+2. Mean value of data points
+3. Standard deviation
+4. Root mean square
+Exporting the stats will make a new text file with this data in it.
+
+CREDITS:
+Abu Jallow: Back-end code, Testing code
+Bryan Yerina: GUI/presentation layer, Glue code, Write-up

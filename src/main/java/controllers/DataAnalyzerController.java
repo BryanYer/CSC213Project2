@@ -18,13 +18,15 @@ import java.io.IOException;
  */
 public class DataAnalyzerController {
 
-    @FXML private Label statsArea;
+    @FXML
+    private Label statsArea;
 
     private final DataAnalyzer analyzer = new DataAnalyzer();
     private File currentFile;
 
     /**
      * Lets you pick a file, and analyzes it
+     *
      * @param event Select file button pressed
      */
     @FXML
@@ -54,6 +56,7 @@ public class DataAnalyzerController {
 
     /**
      * Exports stats to text file
+     *
      * @param event Export stats to .txt button pressed
      */
     @FXML
@@ -62,6 +65,7 @@ public class DataAnalyzerController {
             statsArea.setText("No file analyzed yet.");
             return;
         }
+
 
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Save Stats");
@@ -83,18 +87,19 @@ public class DataAnalyzerController {
                 statsArea.setText("Error writing file: " + e.getMessage());
             }
         }
+
+
     }
 
     @FXML
-    private void handleHelp(ActionEvent event){
+    private void handleHelp (ActionEvent event){
         Stage stage = (Stage) statsArea.getScene().getWindow();
 
         statsArea.setText("""
-                1. Press "Select file"
-                2. Choose a text file with data from your computer
-                3. Press "Export stats to .txt"
-                4. Select a location to save the stats file and choose a name
-                """);
+               1. Press "Select file"
+               2. Choose a text file with data from your computer
+               3. Press "Export stats to .txt"
+               4. Select a location to save the stats file and choose a name
+               """);
     }
-
 }
