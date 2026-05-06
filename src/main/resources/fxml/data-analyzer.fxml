@@ -24,8 +24,7 @@
         </fx:define>
 
         <!-- Select file button -->
-        <!-- TODO: Add onAction tag when glue code gets select file function -->
-        <Button text="Select file" font="$largeFont" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.halignment="CENTER"/>
+        <Button text="Select file" font="$largeFont" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.halignment="CENTER" onAction="#handleSelectFile"/>
 
         <!-- Stats text box -->
         <Label fx:id="statsArea" text="Stats" font="$mediumFont" prefHeight="300" prefWidth="600" GridPane.rowIndex="2" GridPane.columnIndex="0" alignment="CENTER" GridPane.halignment="CENTER"
@@ -35,12 +34,11 @@
               -fx-background-color: white;" />
 
         <!-- Export to .txt button -->
-        <!-- TODO: Add onAction tag when glue code gets export file function -->
-        <Button text="Export stats to .txt" font="$largeFont" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.halignment="CENTER"/>
+        <Button text="Export stats to .txt" font="$largeFont" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.halignment="CENTER" onAction="#handleExport"/>
 
         <!-- Help button -->
-        <!-- TODO: Add onAction tag when glue code gets open help button (if we decide to add that) -->
-        <Button text="Help" font="$largeFont" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.halignment="CENTER"/>
+        <Button text="Help" font="$largeFont" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.halignment="CENTER" onAction="#handleHelp"/>
+
 
     </GridPane>
 </Scene>
