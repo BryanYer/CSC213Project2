@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Tests DataAnalyzer.
+ * @author Abu Jallow
  */
 class DataAnalyzerTest {
 
