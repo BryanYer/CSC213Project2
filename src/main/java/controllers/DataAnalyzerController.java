@@ -13,8 +13,14 @@ import java.io.IOException;
 
 /**
  * Controller for the Data Analyzer UI.
- * Handles file selection, analysis, and exporting results.
+ * Handles file selection, analysis, exporting results, and error logging.
+ *
  * @author Bryan Yerina
+ * @author Abu Jallow
+ *
+ * Abu Jallow contributed:
+ * - Implementation of error logging functionality
+ * - Integration of logging into file selection and export workflows
  */
 public class DataAnalyzerController {
 
@@ -47,6 +53,7 @@ public class DataAnalyzerController {
                 analyzer.analyzeFile(file.getAbsolutePath());
                 statsArea.setText(analyzer.getFormattedResults());
             } catch (IOException | NumberFormatException e) {
+                logError(e);
                 statsArea.setText("Error reading file: " + e.getMessage());
             }
         }
@@ -80,6 +87,7 @@ public class DataAnalyzerController {
                 writer.write(analyzer.getFormattedResults());
                 statsArea.setText("Results exported successfully!");
             } catch (IOException e) {
+                logError(e);
                 statsArea.setText("Error writing file: " + e.getMessage());
             }
         }
@@ -95,6 +103,14 @@ public class DataAnalyzerController {
                 3. Press "Export stats to .txt"
                 4. Select a location to save the stats file and choose a name
                 """);
+    }
+
+    private void logError(Exception e) {
+        try (FileWriter writer = new FileWriter("error.log", true)) {
+            writer.write("ERROR: " + e.getMessage() + "\n");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
 }
