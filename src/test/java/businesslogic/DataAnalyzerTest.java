@@ -9,7 +9,8 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Tests DataAnalyzer.
+ * Testing Code for Data Analyzer
+ * @author Abu Jallow
  * @author Abu Jallow
  */
 class DataAnalyzerTest {
